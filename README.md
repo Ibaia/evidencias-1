@@ -1,8 +1,9 @@
-# TAREAS
+# Tareas a realizar
 
 + [Tarea 1](tarea-01.md)
 
-# Evidencias
+
+# Evidencias de los alumnos
 
 + [Acha Gomez, Ibai](https://github.com/ibaia/evidencias)
 + [Berghie, Bogdan Timus](https://github.com/bogdanEnde/evidencias)
