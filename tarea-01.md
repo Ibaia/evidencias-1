@@ -1,7 +1,9 @@
 # TAREA 1: Crear un servidor para dar respuesta las necesidades de la aplicación a desarrollar.
 
  
+ 
 > **RECUERDA** que debes tomar EVIDENCIAS y que debes **DOCUMENTAR** los pasos que vayas dando **a modo de tutorial** mientras realizas la tarea, con **pantallazos** y otras imágenes explicativas.
+
 
 La aplicación web que vamos a desarrollar tendrá parte322 cliente y parte servidor.
 
