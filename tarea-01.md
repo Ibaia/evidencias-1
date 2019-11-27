@@ -17,3 +17,6 @@ Aquí tenéis un ejemplo de cómo se van a comportar el **cliente** y el **servi
 ![](images/tarea01-img01-cliente-servidor-esquema.png)
 
 Para ver más información sobre el funcionamiento cliente-servidor os podéis documentar en **[www.jarroba.com/cliente-vs-servidor](https://jarroba.com/cliente-vs-servidor/)**
+
+Referencias:
++ [How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
