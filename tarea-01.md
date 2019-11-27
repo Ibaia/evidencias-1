@@ -4,7 +4,7 @@
 > **RECUERDA** que debes tomar EVIDENCIAS y que debes **DOCUMENTAR** los pasos que vayas dando **a modo de tutorial** mientras realizas la tarea, con **pantallazos** y otras imágenes explicativas.
  
  
-La aplicación web que vamos a desarrollar tendrá parte322 cliente y parte servidor.
+La aplicación web que vamos a desarrollar tendrá parte cliente y parte servidor.
 
 La parte **cliente** aún está sin definir, no sabemos con qué tecnología se desarrollará. Pero sabemos que se comunicará con el servidor mediante el protocolo **HTTP** y/o **HTTPS**.
 
