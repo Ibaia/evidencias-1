@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Adibidea</title>
+    <style>
+        body{ font:12pt Arial; zoom:1.5}
+        label{display:block;margin:10px 0px}
+        input[type="text"]{padding: 10px; border:1px solid #666; border-radius: 4px;}
+    </style>
+</head>
+<body>
+    <!-- PASO 1. Preparo el HTML y CSS sin ninguna funcionalidad -->
+    <label for="file">Descripción:<br><input type="text" id="description" placeholder="Describe el contenido del archivo"/></label>
+    <label for="file">Seleccionar archivo:<br><input type="file" id="file"/></label>
+    <button type="button" id="button">Enviar</button>
+
+    <!-- PASO 2. Añado Javascript, sería mejor meterlo en un app.js y referenciarlo -->
+    <script>
+
+     function getFileBase64(file,onsuccess){
+        // PASO 8. Se prepara el lector de fichero de javascript
+        let reader = new FileReader();
+        // PASO 9. Se define la función que se ejecutará una vez cargado y convertido el fichero
+        reader.onload = function(e){
+            /* 
+                PASO 11. Se ha cargado el contenido del fichero.
+                Se llama a la funcion callback y se pasa como parametro su contenido
+            */
+            console.log(e.target.result);
+            onsuccess(e.target.result);
+        }
+        // PASO 10. Se pasa el elemento file al lector
+        reader.readAsDataURL(file);
+     }
+
+     /* PASO 4. El usuario rellena el formulario y elige la imagen */
+
+     /* PASO 5. El usuario pulsa en "Enviar" y se ejecuta onClickEvent */
+     function onClickEvent(){
+        // PASO 6. Se recoge el archivo seleccionado input[type="file"]
+        let inputFile = document.getElementById('file');
+        let file = inputFile.files[0];
+
+        /* 
+            PASO 7. Se pide convertir fichero a Base64 
+            y cuando esté enviarémos la información 
+            al servidor 
+        */
+        getFileBase64(file, function(result){
+            let data = {};
+            // PASO 12. Se recoge el contenido del fichero en Base64
+            data['fileInBase64'] = result;
+            data['fileName'] = file.name;
+
+            // PASO 13. Se recoge el resto de datos del formulario
+            data['descriptionInput'] = document.getElementById('description');
+
+            console.log(data);
+            // PASO 14. Se envia todo por ajax al servidor php
+            fetch('ajax-servidor.php', {
+                method: 'POST',
+                body: new URLSearchParams(data),
+                headers:{
+                  'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            }).then(function(response){
+                // llega la respuesta del servidor
+                console.log(response);
+            });
+        });
+        
+     }
+
+     /* PASO 3. asigno evento al boton (para ponerlo en el html este script habria que cargarlo antes) */
+     (function(){
+        document.getElementById('button').onclick = onClickEvent;
+     })();
+    </script>
+</body>
+</html>
