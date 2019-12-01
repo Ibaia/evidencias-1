@@ -20,6 +20,10 @@
     <!-- PASO 2. Añado Javascript, sería mejor meterlo en un app.js y referenciarlo -->
     <script>
 
+     //Especifica el 'subdominio.dominio/[directorio/]ajax-servidor.php' del servidor AWS donde se aloja el script ajax-servidor.php
+     var server_url = 'ajax-servidor.php'; 
+        
+        
      function getFileBase64(file,onsuccess){
         // PASO 8. Se prepara el lector de fichero de javascript
         let reader = new FileReader();
@@ -60,7 +64,7 @@
 
             console.log(data);
             // PASO 14. Se envia todo por ajax al servidor php
-            fetch('ajax-servidor.php', {
+            fetch(server_script, {
                 method: 'POST',
                 body: new URLSearchParams(data),
                 headers:{
