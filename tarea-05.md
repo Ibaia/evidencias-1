@@ -2,10 +2,10 @@
 
 Instala y configura servidor de FTP en tu **instancia EC2** por el **puerto 21** para poder subir archivos al servidor mediante un cliente FTP como WinSCP o FileZilla.
 
-Crea tres usuarios: *cliente*, *servidor* y *admin*.
+Crea tres usuarios: *cliente*, *servidor* y *administrador*.
 - El usuario **cliente** deberá poder ver y escribir sólo los archivos y subdirectorios que se encuentran en **`/var/www/cliente/`**
 - El usuario **servidor** deberá poder ver y escribir sólo los archivos y subdirectorios que se encuentran en **`/var/www/servidor/`**
-- El usuario **admin** deberá ser capaz de ver y escribir archivos y subdirectorios que se encuentran en **`/var/www/`**
+- El usuario **administrador** deberá ser capaz de ver y escribir archivos y subdirectorios que se encuentran en **`/var/www/`**
 
 De esta manera el servidor estará listo para subir archivos vía FTP.
 
