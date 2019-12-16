@@ -1,4 +1,4 @@
-# Automatizar copias de seguridad
+# TAREA 7: Automatizar copias de seguridad
 
 ## CREAR LOS SCRIPT PARA CLIENTE Y SERVIDOR
 Crea **ficheros de comandos**  **.sh** o **.php** (uno para **cliente** y otro para **servidor**) que te permitan crear los ficheros de backup [el script del **servidor** debe hacer copia de los **ficheros** y de la(s) **base(s) de datos**]. 
