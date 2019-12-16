@@ -6,7 +6,7 @@
 + [Tarea 4](tarea-04.md)
 + [Tarea 5](tarea-05.md)
 + [Tarea 6](tarea-06.md)
-+ [Tarea 7 - para la 1ª semana de enero de 2020 ](tarea-07.md)
++ [Tarea 7 - para el 10 de enero de 2020 ](tarea-07.md)
 
 
 # Evidencias de los alumnos
